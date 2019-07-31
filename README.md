@@ -1,2 +1,7 @@
-# hacker-rank-js
-Hacker Rank Solutions written in JS :)
+# Hacker Rank JS
+> Hacker Rank Solutions written in JS :)
+
+
+
+## Running Tests
+    npm test

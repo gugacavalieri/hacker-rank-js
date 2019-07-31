@@ -1,0 +1,38 @@
+{
+  "name": "hacker-rank-js",
+  "version": "1.0.0",
+  "description": "Hacker Rank Solutions written in JS :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./arrays/**/*test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gugacavalieri/hacker-rank-js.git"
+  },
+  "keywords": [
+    "hackerrank",
+    "hacker",
+    "rank.",
+    "solutions",
+    "js",
+    "javascript"
+  ],
+  "author": "Guga Cavalieri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gugacavalieri/hacker-rank-js/issues"
+  },
+  "homepage": "https://github.com/gugacavalieri/hacker-rank-js#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.2.0"
+  },
+  "dependencies": {}
+}
