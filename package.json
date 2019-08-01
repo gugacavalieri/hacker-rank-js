@@ -4,7 +4,7 @@
   "description": "Hacker Rank Solutions written in JS :)",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./arrays/**/*test.js"
+    "test": "mocha ./arrays/**/*test.js ./math/**/*test.js"
   },
   "repository": {
     "type": "git",
