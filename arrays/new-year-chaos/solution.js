@@ -1,0 +1,52 @@
+/**
+ * main function
+ * receives an array 'q' and calculates the number of bribes made in the queue
+ * time complexity is O(n) for all inputs
+ * for each element in the array we check if there are any of the smallest elements
+ *   behind me
+ * this only works because the array always starts sorted and 3 bribes is an
+ *   invalid state
+ * @param  {Array} q New Year's chaotic array
+ * @return {Number}  Number of Bribes
+ */
+const minimumBribes = (q) => {
+  let numberBribes = 0
+  const minimums = {
+    min: Number.MAX_SAFE_INTEGER,
+    mid: Number.MAX_SAFE_INTEGER,
+    max: Number.MAX_SAFE_INTEGER
+  }
+
+  /* start from the end and check if there are any of the smallest elements
+    behind me */
+  for (let i = q.length - 1; i >= 0; i--) {
+    /* invalid state */
+    if ((q[i] - i) > 3) {
+      return 'Too chaotic'
+    }
+
+    if (q[i] > minimums.mid) {
+      /* i am greater than two people behind me */
+      numberBribes += 2
+    } else if (q[i] > minimums.min) {
+      /* i am greater than one person behind me */
+      numberBribes += 1
+    }
+
+    /* adjust minimum values */
+    if (q[i] < minimums.min) {
+      minimums.third = minimums.mid
+      minimums.mid = minimums.min
+      minimums.min = q[i]
+    } else if (q[i] < minimums.mid) {
+      minimums.max = minimums.mid
+      minimums.mid = q[i]
+    } else if (q[i] < minimums.max) {
+      minimums.max = q[i]
+    }
+  }
+
+  return numberBribes
+}
+
+module.exports = { minimumBribes }
