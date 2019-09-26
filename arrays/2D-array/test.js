@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 const Solution = require('./solution')
 
-describe('2d-array.test.js', () => {
+describe('arrays/2d-array.test.js', () => {
   describe('hourglassSum()', () => {
     it('sum in test case one should be 19', () => {
       const array = [

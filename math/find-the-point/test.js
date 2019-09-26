@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 const Solution = require('./solution')
 
-describe('find-the-point.test.js', () => {
+describe('math/find-the-point.test.js', () => {
   describe('findPoint()', () => {
     it('(0,0) and (1,1) should be (2,2)', () => {
       expect(Solution.findPoint(0, 0, 1, 1)).to.deep.equal([2, 2])
