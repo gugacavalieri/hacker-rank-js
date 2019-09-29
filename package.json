@@ -4,7 +4,8 @@
   "description": "Hacker Rank Solutions written in JS :)",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./arrays/**/*test.js ./math/**/*test.js"
+    "test": "mocha ./arrays/**/*test.js ./math/**/*test.js ./vanhack/**/*test.js",
+    "test-debug": "mocha --inspect-brk ./arrays/**/*test.js ./math/**/*test.js ./vanhack/**/*test.js"
   },
   "repository": {
     "type": "git",
