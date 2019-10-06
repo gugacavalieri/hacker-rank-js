@@ -38,7 +38,7 @@ const kthPerson = (k, p, q) => {
     // console.log(currentKthPerson)
 
     /* check if we reached a kth person */
-    resultArray.push(peopleBoarded >= k ? currentKthPerson : 0)
+    resultArray[i] = (peopleBoarded >= k ? currentKthPerson : 0)
   }
   return resultArray
 }
