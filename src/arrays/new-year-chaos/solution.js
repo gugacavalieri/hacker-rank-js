@@ -12,9 +12,8 @@
 const minimumBribes = (q) => {
   let numberBribes = 0
   const minimums = {
-    min: Number.MAX_SAFE_INTEGER,
-    mid: Number.MAX_SAFE_INTEGER,
-    max: Number.MAX_SAFE_INTEGER
+    first: Number.MAX_SAFE_INTEGER,
+    second: Number.MAX_SAFE_INTEGER,
   }
 
   /* start from the end and check if there are any of the smallest elements
@@ -25,25 +24,22 @@ const minimumBribes = (q) => {
       return 'Too chaotic'
     }
 
-    if (q[i] > minimums.mid) {
+    if (q[i] > minimums.second) {
       /* i am greater than two people behind me */
       numberBribes += 2
-    } else if (q[i] > minimums.min) {
+    } else if (q[i] > minimums.first) {
       /* i am greater than one person behind me */
       numberBribes += 1
     }
 
     /* adjust minimum values */
-    if (q[i] < minimums.min) {
-      minimums.third = minimums.mid
-      minimums.mid = minimums.min
-      minimums.min = q[i]
-    } else if (q[i] < minimums.mid) {
-      minimums.max = minimums.mid
-      minimums.mid = q[i]
-    } else if (q[i] < minimums.max) {
-      minimums.max = q[i]
+    if (q[i] < minimums.first) {
+      minimums.second = minimums.first
+      minimums.first = q[i]
+    } else if (q[i] < minimums.second) {
+      minimums.second = q[i]
     }
+    
   }
 
   return numberBribes
