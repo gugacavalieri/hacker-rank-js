@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha ./src/**/*test.js",
-    "test-debug": "mocha --inspect-brk ./src/**/*test.js"
+    "test:debug": "mocha --inspect-brk ./src/**/*test.js",
+    "test": "mocha ./src/**/*test.js"
   },
   "repository": {
     "type": "git",
