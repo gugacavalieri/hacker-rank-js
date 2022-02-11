@@ -4,6 +4,7 @@
   "description": "Hacker Rank Solutions written in JS :)",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "test": "mocha ./src/**/*test.js",
     "test-debug": "mocha --inspect-brk ./src/**/*test.js"
   },
