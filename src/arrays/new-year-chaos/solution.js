@@ -13,7 +13,7 @@ const minimumBribes = (q) => {
   let numberBribes = 0
   const minimums = {
     first: Number.MAX_SAFE_INTEGER,
-    second: Number.MAX_SAFE_INTEGER,
+    second: Number.MAX_SAFE_INTEGER
   }
 
   /* start from the end and check if there are any of the smallest elements
@@ -39,9 +39,7 @@ const minimumBribes = (q) => {
     } else if (q[i] < minimums.second) {
       minimums.second = q[i]
     }
-    
   }
-
   return numberBribes
 }
 
