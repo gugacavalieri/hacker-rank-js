@@ -6,3 +6,4 @@ ARG USER=node
 ENV HOME /home/$USER/app
 USER $USER
 WORKDIR $HOME
+RUN mkdir $HOME/node_modules $HOME/.npm
