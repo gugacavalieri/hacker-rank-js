@@ -1,5 +1,5 @@
 # Hacker Rank JS
-> Hacker Rank Solutions written in JS :)
+> Hacker Rank Solutions written in JS and Typescript :)
 
 [![Node/Lint](https://github.com/gugacavalieri/hacker-rank-js/actions/workflows/nodejs-lint.yml/badge.svg)](https://github.com/gugacavalieri/hacker-rank-js/actions/workflows/nodejs-lint.yml)
 [![Node/Test](https://github.com/gugacavalieri/hacker-rank-js/actions/workflows/nodejs-test.yml/badge.svg)](https://github.com/gugacavalieri/hacker-rank-js/actions/workflows/nodejs-test.yml)
