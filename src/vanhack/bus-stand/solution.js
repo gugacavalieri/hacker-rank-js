@@ -9,38 +9,35 @@
 */
 
 const kthPerson = (k, p, q) => {
-  const resultArray = []
-  let currentKthPerson = 0
-  let peopleBoarded = 0
+  const resultArray = [];
+  let currentKthPerson = 0;
+  let peopleBoarded = 0;
 
   /* interate on query array */
-  for (let i = 0; i < q.length; i++) {
+  for (let i = 0; i < q.length; i += 1) {
     /* init current kth person for this query */
-    currentKthPerson = 0
-    peopleBoarded = 0
+    currentKthPerson = 0;
+    peopleBoarded = 0;
 
     /* iterate on person time array */
-    for (let j = 0; j < p.length; j++) {
+    for (let j = 0; j < p.length; j += 1) {
       // console.log(p[j], q[i], currentKthPerson, p)
       /* check if bus is full */
       if (peopleBoarded >= k || k > p.length) {
-        break
+        break;
       }
 
       /* if person is still waiting, set this person as kth person */
       if (p[j] >= q[i]) {
-        peopleBoarded++
-        currentKthPerson = j + 1
+        peopleBoarded += 1;
+        currentKthPerson = j + 1;
       }
-      // console.log(i, p, peopleStillInLine)
     }
 
-    // console.log(currentKthPerson)
-
     /* check if we reached a kth person */
-    resultArray[i] = (peopleBoarded >= k ? currentKthPerson : 0)
+    resultArray[i] = (peopleBoarded >= k ? currentKthPerson : 0);
   }
-  return resultArray
-}
+  return resultArray;
+};
 
-module.exports = { kthPerson }
+module.exports = { kthPerson };

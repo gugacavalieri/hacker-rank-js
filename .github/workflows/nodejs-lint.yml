@@ -1,0 +1,21 @@
+name: Node/Lint
+
+on: 
+  push:
+    branches: ["**"]
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build With Compose
+        run: docker compose build this
+
+      - name: Install Dependencies
+        run: docker compose run --rm this npm ci
+
+      - name: Run Tests With Compose
+        run: docker compose run --rm this npm run lint

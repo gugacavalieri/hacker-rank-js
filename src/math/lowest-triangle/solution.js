@@ -1,6 +1,4 @@
-const lowestTriangle = (base, area) => {
-  /* we use ceiling function to return the next smallest integer */
-  return Math.ceil(2 * area / base)
-}
+/* we use ceiling function to return the next smallest integer */
+const lowestTriangle = (base, area) => Math.ceil((2 * area) / base);
 
-module.exports = { lowestTriangle }
+module.exports = { lowestTriangle };

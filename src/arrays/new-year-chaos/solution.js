@@ -10,37 +10,37 @@
  * @return {Number}  Number of Bribes
  */
 const minimumBribes = (q) => {
-  let numberBribes = 0
+  let numberBribes = 0;
   const minimums = {
     first: Number.MAX_SAFE_INTEGER,
-    second: Number.MAX_SAFE_INTEGER
-  }
+    second: Number.MAX_SAFE_INTEGER,
+  };
 
   /* start from the end and check if there are any of the smallest elements
     behind me */
-  for (let i = q.length - 1; i >= 0; i--) {
+  for (let i = q.length - 1; i >= 0; i -= 1) {
     /* invalid state */
     if ((q[i] - i) > 3) {
-      return 'Too chaotic'
+      return 'Too chaotic';
     }
 
     if (q[i] > minimums.second) {
       /* i am greater than two people behind me */
-      numberBribes += 2
+      numberBribes += 2;
     } else if (q[i] > minimums.first) {
       /* i am greater than one person behind me */
-      numberBribes += 1
+      numberBribes += 1;
     }
 
     /* adjust minimum values */
     if (q[i] < minimums.first) {
-      minimums.second = minimums.first
-      minimums.first = q[i]
+      minimums.second = minimums.first;
+      minimums.first = q[i];
     } else if (q[i] < minimums.second) {
-      minimums.second = q[i]
+      minimums.second = q[i];
     }
   }
-  return numberBribes
-}
+  return numberBribes;
+};
 
-module.exports = { minimumBribes }
+module.exports = { minimumBribes };
