@@ -14,5 +14,8 @@ jobs:
       - name: Build With Compose
         run: docker compose build this
 
+      - name: Install Dependencies
+        run: docker compose run --rm this npm ci
+
       - name: Run Tests With Compose
         run: docker compose run --rm this npm run lint
