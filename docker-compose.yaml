@@ -5,4 +5,4 @@ services:
       dockerfile: Dockerfile
       target: production
     volumes:
-      - .:/home/node
+      - .:/home/node/app
