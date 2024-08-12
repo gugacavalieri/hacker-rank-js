@@ -9,16 +9,16 @@
  * @return {Array}       Array rotated 'd' positions to the left
  */
 const rotLeft = (array, d) => {
-  const pivot = d % array.length
+  const pivot = d % array.length;
 
-  const firstElements = array.slice(pivot, array.length)
-  const lastElements = array.slice(0, pivot)
+  const firstElements = array.slice(pivot, array.length);
+  const lastElements = array.slice(0, pivot);
 
-  return [...firstElements, ...lastElements]
-}
+  return [...firstElements, ...lastElements];
+};
 
 /*
   we can implement a future solution using only 'for'
  */
 
-module.exports = { rotLeft }
+module.exports = { rotLeft };

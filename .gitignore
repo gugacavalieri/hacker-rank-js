@@ -1,1 +1,4 @@
 node_modules
+
+# files mounted by docker compose
+.npm
