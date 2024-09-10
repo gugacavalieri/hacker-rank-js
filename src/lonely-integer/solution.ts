@@ -36,4 +36,4 @@ const lonelyinteger = (a: number[]): number => {
   return lonelyInteger;
 };
 
-module.exports = { lonelyinteger };
+export default { lonelyinteger };

@@ -26,4 +26,4 @@ const birthdayCakeCandles = (candles: number[]) : number => {
   return candleCounterHashMap[biggestCandle];
 };
 
-module.exports = { birthdayCakeCandles };
+export default { birthdayCakeCandles };

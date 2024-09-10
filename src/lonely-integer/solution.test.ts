@@ -1,5 +1,5 @@
-// eslint-disable-next-line import/no-unresolved
-const Solution = require('./solution.ts');
+// eslint-disable-next-line import/no-unresolved, import/extensions
+import Solution from './solution';
 
 describe('lonely-integer', () => {
   it('HackerRank - Sample Input 0', () => {
@@ -15,3 +15,5 @@ describe('lonely-integer', () => {
     expect(Solution.lonelyinteger([])).toEqual(-1);
   });
 });
+
+export {};
