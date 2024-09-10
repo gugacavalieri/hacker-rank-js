@@ -11,14 +11,14 @@
 ## How to Run this project (With Docker 🐳)
 ```bash
 # install deps
-docker compose run --rm --build this npm install
+make build
 # run linter
-docker compose run --rm --build this npm run lint
+make lint
 # run tests
-docker compose run --rm --build this npm run test
+make test
 ```
 
 ## Running Tests
 ```bash
-docker compose run --rm --build this npm run test
+make test
 ```
